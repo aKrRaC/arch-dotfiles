@@ -152,9 +152,7 @@ XF86AudioMute
 
 # media control
 XF86AudioPlay
-	playerctl play
-XF86AudioPause
-	playerctl pause
+	playerctl play-pause
 XF86AudioStop
 	playerctl stop
 XF86AudioNext
