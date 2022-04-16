@@ -163,3 +163,7 @@ XF86AudioPrev
 # brightness control
 XF86MonBrightness{Up,Down}
 	brightnessctl s 1000{+,-}
+
+# power stuff
+XF86PowerOff
+	$HOME/.config/rofi/powermenu/powermenu.sh
