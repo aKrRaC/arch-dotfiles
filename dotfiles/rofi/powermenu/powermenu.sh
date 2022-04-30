@@ -70,9 +70,6 @@ case $chosen in
     $suspend)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			playerctl pause
-			amixer set Master mute
-			i3lock -i /home/akhilrac2000/Pictures/Wallpapers/background.png
 			systemctl suspend
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
