@@ -24,11 +24,12 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi -theme $dir/$theme"
 
 # Options
-shutdown="⏻"
-reboot=""
-lock=""
-suspend=""
+shutdown=""
+reboot=""
+lock=""
+hibernate=""
 logout=""
+suspend=""
 
 # Confirmation
 confirm_exit() {
@@ -45,9 +46,10 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
+options="$shutdown\n$reboot\n$lock\n$hibernate\n$logout\n$suspend"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 2)"
+
 case $chosen in
     $shutdown)
 			systemctl poweroff
@@ -61,6 +63,9 @@ case $chosen in
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
 		fi
+        ;;
+    $hibernate)
+			systemctl hibernate
         ;;
     $suspend)
 		ans=$(confirm_exit &)

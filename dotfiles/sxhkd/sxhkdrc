@@ -167,3 +167,9 @@ XF86MonBrightness{Up,Down}
 # power stuff
 XF86PowerOff
 	$HOME/.config/rofi/powermenu/powermenu.sh
+
+#other misc stuff
+XF86TouchpadToggle
+	$HOME/.config/rofi/misc/touchpad.sh
+XF86ScreenSaver
+	$HOME/.config/rofi/misc/display.sh
