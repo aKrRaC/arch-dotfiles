@@ -18,7 +18,7 @@ echo "Installing necessary packages..."
 echo " "
 
 #necessary packages
-pacman -S unzip picom xorg bspwm polybar lightdm lightdm-slick-greeter rofi kitty thunar flameshot neofetch sxhkd git 
+pacman -S unzip picom xorg bspwm polybar lightdm lightdm-slick-greeter rofi kitty thunar flameshot neofetch sxhkd git xss-lock i3lock
 pacman -S papirus-icon-theme nitrogen lxappearance-gtk3 qt5-svg ttf-font-awesome qt5-quickcontrols qt5-quickcontrols2 ttf-fira-code noto-fonts-emoji
 yay -S lxpolkit-git
 
