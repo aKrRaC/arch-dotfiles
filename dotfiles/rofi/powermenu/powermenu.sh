@@ -59,7 +59,7 @@ case $chosen in
         ;;
     $lock)
 		if [[ -f /usr/bin/i3lock ]]; then
-			i3lock -i /home/akhilrac2000/Pictures/Wallpapers/background.png
+			i3lock -n -i /home/akhilrac2000/Pictures/Wallpapers/background.png
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
 		fi
